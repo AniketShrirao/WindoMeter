@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import { ThemeProvider } from 'styled-components';
+import theme from './themes/index';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Loader from './components/Loader';
+
+const Home = lazy(() => import('./components/Home'));
+const Finder = lazy(() => import('./components/Finder'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Suspense fallback={<Loader />}>
+        <Router>
+          <div className="container">
+            <Header />
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={<Home />}
+              />
+              <Route
+                path='/finder'
+                element={<Finder />}
+              />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </Suspense>
+    </ThemeProvider>
   );
 }
 
