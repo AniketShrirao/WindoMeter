@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormGroup = styled.div`
-	color: palevioletred;
+	color: ${(props) => props.theme.colors.BLACK};
     display: block;
     width: 41%;
     margin: 10px 7%;
@@ -9,15 +9,16 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
 	margin-bottom: 0.5em;
-	color: palevioletred;
+	font-family: 'open-san',sans-serif;
+	color: ${(props) => props.theme.colors.BLACK};
     display: block;
 `;
 
 
 export const Input = styled.input`
 	padding: 0.5em;
-	color: palevioletred;
-	background: papayawhip;
+	color: ${(props) => props.theme.colors.BLACK};
+	background: ${(props) => props.theme.colors.INPUT_COLOR};
 	border: none;
 	border-radius: 3px;
 	width: 100%;
@@ -26,6 +27,6 @@ export const Input = styled.input`
 
 export const Message = styled.label`
 	margin-bottom: 0.5em;
-	color: palevioletred;
+	color: ${(props) => props.theme.colors.BLACK};
     display: block;
 `;

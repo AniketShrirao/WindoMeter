@@ -5,6 +5,7 @@ import Dropdown from '../Utilities/Dropdown';
 import Heading from '../Utilities/Heading';
 import Wrapper from '../wrapper';
 import { FormGroup, Input, Label } from '../Utilities/Form/Form.styled';
+import WindDetailsContainer from './DistrictWindDetails.styled';
 
 const DistrictWindDetails = () => {
 
@@ -18,20 +19,22 @@ const DistrictWindDetails = () => {
 
 
     return (
-        <section className='wind-details'>
+        <WindDetailsContainer className='wind-details'>
             <Wrapper>
-                <Heading className='heading' heading='Wind Details' />
+                <Heading className='heading' heading='Add Wind Details' />
                 <form action="post" onSubmit={(e) => onDistrictWindDetailsSubmit(e)}>
                     <FormGroup className="form-group">
                         <Label htmlFor="speed">Speed</Label>
                         <Input type="number" placeholder='in km/hr' name='speed' title='speed' />
                     </FormGroup>
-                    <FormGroup className="form-group">
-                        <Dropdown options={directionsOptions} placeholder='directions from...' />
-                    </FormGroup>
-                    <FormGroup className="form-group">
-                        <Dropdown options={directionsOptions} placeholder='directions to...' />
-                    </FormGroup>
+                    <div className='form-inline-group'>
+                        <FormGroup className="form-group">
+                            <Dropdown options={directionsOptions} placeholder='directions from...' />
+                        </FormGroup>
+                        <FormGroup className="form-group">
+                            <Dropdown options={directionsOptions} placeholder='directions to...' />
+                        </FormGroup>
+                    </div>
                     <FormGroup className="form-group">
                         <Label htmlFor="datetime">Date & Time</Label>
                         <Input type="text" placeholder='in dd-mm-yyyy hh:mm:ss' name='datetime' title='datetime' />
@@ -49,7 +52,7 @@ const DistrictWindDetails = () => {
                     </FormGroup>
                 </form>
             </Wrapper >
-        </section>
+        </WindDetailsContainer>
     )
 }
 

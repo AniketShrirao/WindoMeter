@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { directionsOptions } from '../../data';
+import React, { useEffect, useState } from 'react'
+import { directionsOptions, getDistrictList } from '../../data';
 import Button from '../Utilities/Button';
 import Dropdown from '../Utilities/Dropdown';
 import Heading from '../Utilities/Heading';
 import Wrapper from '../wrapper';
 import { FormGroup, Input, Label } from '../Utilities/Form/Form.styled';
-import SearchOutput from '../SearchOutput/SearchOutput.styled';
+import SearchOutput from '../Utilities/SearchOutput/SearchOutput.styled';
 import AvgWindSpeedContainer from './AvgWindSpeed.styled';
 
 const AverageWindSpeed = () => {
@@ -16,13 +16,19 @@ const AverageWindSpeed = () => {
         const details = new FormData().entries();
     }
 
-    const [dateTime, setDateTime] = useState('');
+    useEffect(() => {
+        console.log(getDistrictList());
+    }, [])
+
+
+
+    const [districtOptions, setDistrictOptions] = useState('');
 
 
     return (
         <AvgWindSpeedContainer className='avg-wind-speed-details'>
             <Wrapper>
-                <Heading className='heading' heading='Average Wind Speed Details' />
+                <Heading className='heading' heading='Calculate Average Wind Speed Details' />
                 <div className="search-details">
                     <form action="post" onSubmit={(e) => onAvgWindSpeedDetailsSubmit(e)}>
                         <div className='form-inline-group'>

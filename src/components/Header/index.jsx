@@ -13,8 +13,8 @@ const Header = () => {
                         <figure>
                             <a to='/' title="Home"><SiteLogo /></a>
                         </figure>
-                        <span>Windometer</span>
                     </h1>
+                    <p>Windometer</p>
                 </div>
                 <div className="navigation-menu">
                     <NavigationContainer>
@@ -24,6 +24,9 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link to='/finder' title="finder" >finder</Link>
+                            </li>
+                            <li>
+                                <Link to='/forecast' title="forecast" >forecast</Link>
                             </li>
                         </ul>
                     </NavigationContainer>

@@ -4,6 +4,8 @@ import theme from '.';
 
 const GlobalStyle = createGlobalStyle`
 
+    font-family: 'open-san', sans-serif;
+
     a {
        text-decoration: none;
        color: inherit;

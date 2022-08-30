@@ -20,16 +20,18 @@ const DistrictDetails = () => {
     return (
         <section className='district-details'>
             <Wrapper>
-                <Heading className='heading' heading='District Details' />
+                <Heading className='heading' heading='Add District Details' />
                 <form action="post" onSubmit={(e) => onDistrictDetailsSubmit(e)}>
                     <FormGroup className="form-group">
                         <Label htmlFor="districtname">District Name</Label>
                         <Input type="text" name='districtname' title='district name' />
                     </FormGroup>
                     <FormGroup className="form-group">
-                        <Label htmlFor="coords">co-ordinates for district</Label>
-                        <Input type="number" placeholder='x' name='coordsx' title='coordsx' />
-                        <Input type="number" placeholder='y' name='coordsy' title='coordsy' />
+                        <Label htmlFor="coords">Co-ordinates for district</Label>
+                        <Input type="number" placeholder='x1y1' name='coordsx' title='coordsx' />
+                        <Input type="number" placeholder='x2y2' name='coordsy' title='coordsy' />
+                        <Input type="number" placeholder='x3y3' name='coordsy' title='coordsy' />
+                        <Input type="number" placeholder='x4y4' name='coordsy' title='coordsy' />
                     </FormGroup>
                     <FormGroup className="form-control">
                         <Button buttonType="submit" value='add' />

@@ -11,15 +11,7 @@ const Footer = () => {
             <Wrapper>
                 <CopyrightInfo>
                     <div className="copyright">
-                        <p>
-                            <span>Copyright ©WindoMeter 2021</span>
-                            <a href="#FIXME">Website Privacy Policy</a>
-                        </p>
-                        <p>
-                            WindoMeter is a charity (No.1122155) and a
-                            not-for-profit company limited by guarantee (No. 04337865)
-                            registered in England and Wales.
-                        </p>
+                        <p><span>Copyright ©WindoMeter 2021</span>  |  <a href="#FIXME">Website Privacy Policy</a></p>
                     </div>
                 </CopyrightInfo>
             </Wrapper>

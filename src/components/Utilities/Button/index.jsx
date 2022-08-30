@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledButton } from './Button.styled';
+import StyledButton from './Button.styled';
 
 const Button = ({ styleClass, onClick, children, buttonType, value }) => {
     const handleClick = (event) => onClick(event);

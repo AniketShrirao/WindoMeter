@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './themes/index';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Loader from './components/Loader';
+import Forecast from './components/Forecast';
 
 const Home = lazy(() => import('./components/Home'));
 const Finder = lazy(() => import('./components/Finder'));
@@ -25,6 +26,10 @@ function App() {
               <Route
                 path='/finder'
                 element={<Finder />}
+              />
+              <Route
+                path='/forecast'
+                element={<Forecast />}
               />
             </Routes>
             <Footer />

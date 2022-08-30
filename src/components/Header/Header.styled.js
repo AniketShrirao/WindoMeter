@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  font-family: 'BebasNeue-Regular';
-  background: linear-gradient(
+  background:linear-gradient(
     to right,
-    ${(props) => props.theme.colors.SECONDARY_COLOR} 50%,
-    ${(props) => props.theme.colors.PRIMARY_COLOR} 50%
-  );
+    hsla(141, 54%, 86%, 1) 0%,
+    hsla(333, 73%, 85%, 1) 50%,
+    hsla(211, 58%, 79%, 1) 100%
+  );;
 
   .wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: transparent;
     color: ${(props) => props.theme.colors.WHITE};
 
@@ -19,9 +18,15 @@ const HeaderContainer = styled.header`
       flex-wrap: wrap;
     }
 
+    .navigation-menu {
+      margin-left: 35%;
+    }
+
     .site-logo {
       padding: 25px 0;
-      background-color: ${(props) => props.theme.colors.SECONDARY_COLOR};
+      width: 20%;
+      display: flex;
+      align-items: center;
 
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -33,21 +38,16 @@ const HeaderContainer = styled.header`
           width: 58%;
         }
 
-        span {
-          display: inline-block ;
-          margin-top: 10px;
-          font-weight: 700;
-        }
-
+        
         figure {
-         svg {
-          path {
-            fill: white ;
-          }
+          svg {
+            path {
+              fill: white ;
+            }
          }
           a {
             display: block;
-
+            
             img {
               width: 100%;
             }
@@ -55,7 +55,13 @@ const HeaderContainer = styled.header`
         }
       }
     }
-
+    
+    p {
+      display: inline-block ;
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 40px;
+    }
     .navigation-menu {
       width: 35%;
     }
@@ -68,11 +74,14 @@ const NavigationContainer = styled.nav`
     justify-content: flex-start;
     width: 100%;
     li {
-      margin:0 5%;
+      margin:0 1%;
 
       a {
-        display:inline-block ;
-        padding:15px;
+        padding: 12px 15px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: open-sans, sans-serif;
+        text-transform: uppercase;
       }
     }
   }  

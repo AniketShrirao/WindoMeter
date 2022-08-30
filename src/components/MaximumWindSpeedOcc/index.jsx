@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Heading from '../Utilities/Heading';
 import Wrapper from '../wrapper';
-import SearchOutput from '../SearchOutput/SearchOutput.styled';
+import SearchOutput from '../Utilities/SearchOutput/SearchOutput.styled';
 import MaxWindSpeedContainer from './MaxWindSpeedOcc.styled';
 
 const MaxWindAndOccSpeed = () => {
